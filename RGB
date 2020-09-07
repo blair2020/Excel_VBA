@@ -1,0 +1,8 @@
+Sub demoRGB()
+    Dim r As Range, arr
+    For Each r In Range("D2:D42")
+        arr = Split(r, ",")
+        r.Interior.Color = RGB(CInt(arr(0)), CInt(arr(1)), CInt(arr(2)))
+        r.Font.Color = RGB(255 - CInt(arr(0)), 255 - CInt(arr(1)), 255 - CInt(arr(2)))
+    Next
+End Sub
