@@ -13,6 +13,5 @@ Sub demoRGB()
     For Each r In Range("D2:D42")
         arr = Split(r, ",")
         r.Offset(0, 1).Interior.Color = RGB(CInt(arr(0)), CInt(arr(1)), CInt(arr(2)))
-        r.Offset(0, 1).Font.Color = RGB(255 - CInt(arr(0)), 255 - CInt(arr(1)), 255 - CInt(arr(2)))
     Next
 End Sub
